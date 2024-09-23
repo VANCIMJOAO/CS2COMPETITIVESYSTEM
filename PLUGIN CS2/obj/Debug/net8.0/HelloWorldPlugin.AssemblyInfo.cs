@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("HelloWorldPlugin")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6b09fdec7515df6bb4e556684bea7b1fda09739a")]
 [assembly: System.Reflection.AssemblyProductAttribute("HelloWorldPlugin")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HelloWorldPlugin")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
