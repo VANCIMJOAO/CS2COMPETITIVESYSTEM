@@ -1,0 +1,12 @@
+C:\Users\VANCIM\HelloWorldPlugin\bin\Debug\net8.0\HelloWorldPlugin.deps.json
+C:\Users\VANCIM\HelloWorldPlugin\bin\Debug\net8.0\HelloWorldPlugin.dll
+C:\Users\VANCIM\HelloWorldPlugin\bin\Debug\net8.0\HelloWorldPlugin.pdb
+C:\Users\VANCIM\HelloWorldPlugin\obj\Debug\net8.0\HelloWorldPlugin.csproj.AssemblyReference.cache
+C:\Users\VANCIM\HelloWorldPlugin\obj\Debug\net8.0\HelloWorldPlugin.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\VANCIM\HelloWorldPlugin\obj\Debug\net8.0\HelloWorldPlugin.AssemblyInfoInputs.cache
+C:\Users\VANCIM\HelloWorldPlugin\obj\Debug\net8.0\HelloWorldPlugin.AssemblyInfo.cs
+C:\Users\VANCIM\HelloWorldPlugin\obj\Debug\net8.0\HelloWorldPlugin.csproj.CoreCompileInputs.cache
+C:\Users\VANCIM\HelloWorldPlugin\obj\Debug\net8.0\HelloWorldPlugin.dll
+C:\Users\VANCIM\HelloWorldPlugin\obj\Debug\net8.0\refint\HelloWorldPlugin.dll
+C:\Users\VANCIM\HelloWorldPlugin\obj\Debug\net8.0\HelloWorldPlugin.pdb
+C:\Users\VANCIM\HelloWorldPlugin\obj\Debug\net8.0\ref\HelloWorldPlugin.dll
