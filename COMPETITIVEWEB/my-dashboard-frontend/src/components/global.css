@@ -1,0 +1,38 @@
+:root {
+    --primary-color: #BB86FC;
+    --secondary-color: #03DAC6;
+    --background-dark: #121212;
+    --surface-color: #1F1B24;
+    --text-light: #E1E1E1;
+    --text-dark: #000000;
+    --font-large: 2.5rem;
+    --font-medium: 1.8rem;
+    --font-small: 1.2rem;
+  }
+  
+  html, body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-dark);
+    color: var(--text-light);
+    font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
+  }
+  
+  a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  a:hover {
+    color: var(--secondary-color);
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  

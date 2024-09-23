@@ -1,0 +1,544 @@
+/* Variáveis de Cores */
+:root {
+  --primary-color: #BB86FC;
+  --secondary-color: #03DAC5;
+  --background-color: #121212;
+  --surface-color: #1F1B24;
+  --hover-color: #29233A;
+  --text-color: #FFFFFF;
+  --muted-text-color: #BBBBBB;
+  --accent-color: #FF4D00;
+}
+
+/* Estilos Globais */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+h2, h3 {
+  color: var(--text-color);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: var(--surface-color);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo Styles */
+.logo a {
+  font-size: 1.5rem;
+  color: var(--text-color);
+  font-weight: bold;
+}
+
+/* Hamburger Icon Styles */
+.hamburger {
+  display: flex;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 24px;
+  width: 30px;
+  z-index: 1000;
+}
+
+.line {
+  width: 100%;
+  height: 4px;
+  background-color: var(--text-color); /* Cor do ícone de menu */
+  border-radius: 2px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Overlay and Menu Styles */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 105;
+}
+
+.menu {
+  margin: 0; /* Remove qualquer margin padrão */
+  padding: 0; /* Remove qualquer padding padrão */
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100%;
+  background-color: var(--surface-color);
+  z-index: 9999;
+  padding: 100px 20px 20px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: transform 0.3s ease-in-out;
+  transform: translateX(100%); /* Menu começa fora da tela */
+  list-style: none; /* Remove as bolinhas dos itens da lista */
+}
+
+.menu.menu-open {
+  transform: translateX(0); /* Menu aparece quando aberto */
+}
+
+.menu li {
+  margin-bottom: 30px;
+  list-style: none;
+  padding: 20px;
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ), url('https://example.com/sua-imagem.jpg'); /* Gradiente + Imagem */
+  background-size: cover; /* Cobrir todo o elemento */
+  background-position: center; /* Centralizar a imagem */
+  background-repeat: no-repeat; /* Evitar repetição da imagem */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, opacity 0.3s ease;
+  display: flex;
+  justify-content: flex-end; /* Colocar o conteúdo à direita */
+  align-items: flex-end; /* Colocar o conteúdo na parte inferior */
+  height: 60px; /* Definir uma altura fixa para os itens */
+  width: 100%; /* Ocupar toda a largura do menu */
+  color: white; /* Ajustar cor do texto se necessário */
+  position: relative;
+  overflow: hidden; /* Para que a opacidade não ultrapasse os limites */
+}
+
+.menu li::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* Fundo com leve opacidade para escurecer */
+  transition: opacity 0.3s ease-in-out;
+  z-index: 1;
+}
+
+.menu li:hover::before {
+  opacity: 0.7; /* Torna a opacidade mais visível ao passar o mouse */
+}
+
+.menu li:hover {
+  transform: scale(1.05); /* Efeito de zoom */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Adicionar sombra */
+}
+
+/* Itens do Menu com fundo personalizado */
+.menu li:nth-child(1) {
+  margin-bottom: 30px;
+  list-style: none;
+  padding: 10px;
+  background-image: url('https://images8.alphacoders.com/115/1155469.jpg'); /* URL da imagem de fundo do primeiro item */
+  background-size: cover;
+  background-position: center;
+
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  color: white;
+}
+
+.menu li:nth-child(2) {
+  margin-bottom: 30px;
+  list-style: none;
+  padding: 10px;
+  background-image: url('https://images8.alphacoders.com/115/1155469.jpg'); /* URL da imagem de fundo do segundo item */
+  background-size: cover;
+  background-position: center;
+
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  color: white;
+}
+
+.menu li:nth-child(3) {
+  margin-bottom: 30px;
+  list-style: none;
+  padding: 10px;
+  background-image: url('https://images8.alphacoders.com/115/1155469.jpg'); /* URL da imagem de fundo do terceiro item */
+  background-size: cover;
+  background-position: center;
+
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  color: white;
+}
+
+
+.menu li:hover {
+  transform: scale(1.05); /* Aumentar um pouco ao passar o mouse */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Adicionar sombra */
+}
+
+.menu li a {
+  position: relative;
+  color: var(--text-color);
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  transition: color 0.3s ease, transform 0.3s ease;
+  text-align: right; /* Alinhar o texto à direita */
+  width: 100%;
+  margin-right: 10px; /* Adicionar um pequeno espaço da borda */
+  margin-bottom: 5px; /* Espaço inferior */
+  z-index: 2; /* Garantir que o texto fique acima do gradiente */
+}
+
+/* Responsividade para Menu */
+@media (max-width: 768px) {
+  .menu {
+    width: 100%;
+    padding: 100px 20px 20px 20px;
+  }
+}
+
+/* Layout de Colunas */
+.layout-container {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 80px auto 0 auto; /* Margem superior ajustada para o navbar fixo */
+  padding: 20px;
+  gap: 20px; /* Espaçamento entre as colunas */
+}
+
+/* Coluna Esquerda e Direita */
+.left-column, .right-column {
+  width: 20%; /* Tamanho das colunas laterais */
+  background-color: var(--surface-color);
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Coluna Central */
+.center-column {
+  width: 55%; /* Tamanho da coluna central */
+  padding: 20px;
+  background-color: var(--surface-color);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Ajustes para News e Eventos */
+.news-section, .events-section {
+  margin-bottom: 20px;
+}
+
+.news-list, .events-list {
+  list-style: none;
+  padding: 0;
+}
+
+.news-list li, .events-list li {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--hover-color);
+}
+
+.news-list li:last-child, .events-list li:last-child {
+  border-bottom: none;
+}
+
+/* Partidas */
+.match-list {
+  list-style: none;
+  padding: 0;
+}
+
+.match-item {
+  margin-bottom: 20px;
+  background-color: var(--surface-color);
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.match-image-container {
+  position: relative;
+  width: 100%;
+  height: 150px;
+}
+
+.match-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gradient-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7));
+}
+
+.match-info-container {
+  padding: 15px;
+}
+
+.match-teams-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.team-logo {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.team-name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.score {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--accent-color);
+}
+
+.divider {
+  width: 1px;
+  background-color: var(--muted-text-color);
+  height: 30px;
+  margin: 0 15px;
+}
+
+/* Status da Partida */
+.live-badge,
+.finished-badge {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 5px 15px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  border-radius: 20px;
+  color: var(--text-color);
+}
+
+.live-badge {
+  background-color: #e53935;
+}
+
+.finished-badge {
+  background-color: #43a047;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  .layout-container {
+    flex-direction: column;
+  }
+
+  .left-column, .right-column {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .center-column {
+    width: 100%;
+  }
+}
+
+/* Loader */
+.loader {
+  margin: 100px auto;
+  width: 50px;
+  height: 50px;
+  border: 6px solid var(--primary-color);
+  border-top: 6px solid transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Estatísticas dos Jogadores */
+.player-stats-section {
+  margin-top: 40px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.player-stats-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+}
+
+.player-card {
+  background-color: var(--surface-color);
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.player-photo-container {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+}
+
+.player-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.player-photo:hover {
+  transform: scale(1.05);
+}
+
+.player-info {
+  margin-top: 10px;
+}
+
+.player-info h4 {
+  font-size: 1.2rem;
+  color: var(--text-color);
+}
+
+.player-info p {
+  color: var(--muted-text-color);
+}
+
+/* Ajustes de Layout para o Menu Fixo */
+.layout-container {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 80px auto 0 auto; /* Margem superior ajustada para o navbar fixo */
+  padding: 20px;
+  gap: 20px; /* Espaçamento entre as colunas */
+}
+
+/* Responsividade para Menu */
+@media (max-width: 768px) {
+  .menu {
+    width: 100%;
+    padding: 100px 20px 20px 20px;
+  }
+
+  .layout-container {
+    margin: 80px 10px 0 10px; /* Margem lateral reduzida em telas menores */
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .left-column, .right-column, .center-column {
+    width: 100%;
+  }
+}
+
+/* Adicionando Efeitos Adicionais para Melhor Experiência do Usuário */
+.noMatches, .loader {
+  text-align: center;
+  color: var(--muted-text-color);
+}
+
+.player-card img {
+  transition: transform 0.3s ease;
+}
+
+.player-card img:hover {
+  transform: scale(1.05);
+}
+/* Cards de Notícias */
+.news-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.news-card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--surface-color);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.news-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.news-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.news-content {
+  padding: 15px;
+  text-align: left;
+}
+
+.news-content h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: var(--text-color);
+}
+
+.news-content p {
+  color: var(--muted-text-color);
+  margin-bottom: 10px;
+}
+
+.read-more {
+  font-weight: bold;
+  color: var(--accent-color);
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+.read-more:hover {
+  color: var(--secondary-color);
+}
+.kd-stat {
+  font-weight: bold;
+  color: black !important; /* Usando uma cor de destaque */
+  font-size: 1.1rem; /* Aumentando o tamanho da fonte */
+  padding: 5px;
+  border-radius: 5px;
+  background-color: var(--accent-color); /* Adicionando um fundo */
+  display: inline-block;
+}
+

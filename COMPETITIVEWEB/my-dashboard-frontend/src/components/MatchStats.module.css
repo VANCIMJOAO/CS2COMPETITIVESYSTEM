@@ -1,0 +1,52 @@
+.teamStats {
+  background-color: var(--surface-color);
+  padding: 20px;
+  flex: 1;
+  min-width: 300px;
+}
+
+.teamName {
+  font-size: 1.5rem;
+  color: white;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.statsTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.playerName {
+  cursor: pointer;
+  color: white;
+  text-decoration: none;
+}
+
+.playerName:hover {
+  color: wheat;
+}
+
+
+.statsTable th,
+.statsTable td {
+  padding: 10px;
+  text-align: center;
+  color: var(--text-light);
+}
+
+.statsTable th {
+  background-color: var(--background-dark);
+}
+
+.statsTable tr:nth-child(even) {
+  background-color: #2a2a2a;
+}
+
+.positive {
+  color: var(--secondary-color);
+}
+
+.negative {
+  color: #cf6679;
+}

@@ -1,0 +1,95 @@
+.gameLogContainer {
+  background-color: var(--surface-color);
+  padding: 20px;
+  border-radius: 12px;
+  max-height: 600px;
+  overflow-y: auto;
+}
+
+.gameLogContainer::-webkit-scrollbar {
+  width: 8px;
+}
+
+.gameLogContainer::-webkit-scrollbar-track {
+  background: var(--background-dark);
+}
+
+.gameLogContainer::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color);
+  border-radius: 4px;
+}
+
+.roundBlock {
+  margin-bottom: 30px;
+}
+
+.roundTitle {
+  font-size: var(--font-medium);
+  color: white;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.logEvent {
+  display: flex;
+  align-items: center;
+  padding: 12px 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  background-color: #2a2a2a;
+  transition: background-color 0.3s ease;
+}
+
+.logEvent:hover {
+  background-color: rgba(98, 0, 238, 0.1);
+}
+
+.logEvent.T {
+  border-left: 4px solid #cf6679;
+}
+
+.logEvent.CT {
+  border-left: 4px solid #03dac6;
+}
+
+.time {
+  font-size: 0.9rem;
+  color: #999;
+  margin-right: 15px;
+  width: 60px;
+}
+
+.description {
+  font-size: 1rem;
+  color: var(--text-light);
+}
+
+.weaponIcon {
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+}
+
+.headshot {
+  color: #ffeb3b;
+  margin-left: 5px;
+}
+
+@media (max-width: 768px) {
+  .roundTitle {
+    font-size: 1.2rem;
+  }
+
+  .logEvent {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .time {
+    margin-bottom: 5px;
+  }
+
+  .description {
+    font-size: 0.9rem;
+  }
+}
